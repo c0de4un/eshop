@@ -1,0 +1,18 @@
+{
+    "name": "c0de4un/eshop",
+    "description": "E-Commerce General Shop",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "C0de4un\\Eshop\\": "src/php/"
+        }
+    },
+    "authors": [
+        {
+            "name": "c0de4un",
+            "email": "code4un@yandex.ru"
+        }
+    ],
+    "require": {}
+}
