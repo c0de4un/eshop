@@ -1,0 +1,36 @@
+{
+  "name": "eshop",
+  "version": "0.1.0",
+  "description": "eshop",
+  "main": "app.js",
+  "scripts": {
+    "clean": "rm dist/bundle.js",
+    "build-dev": "webpack --mode development",
+    "build-prod": "webpack --mode production",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c0de4un/eshop.git"
+  },
+  "author": "c0de4un",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/c0de4un/eshop/issues"
+  },
+  "homepage": "https://github.com/c0de4un/eshop#readme",
+  "devDependencies": {
+    "css-loader": "^6.5.0",
+    "jest": "^27.3.1",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.4.4",
+    "webpack": "^5.61.0",
+    "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "jquery": "^3.6.0",
+    "popper.js": "^1.16.1"
+  }
+}
