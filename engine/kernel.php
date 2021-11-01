@@ -19,16 +19,19 @@
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-// Kernel
-require('engine/kernel.php');
+if ( !function_exists('isCLI') ) {
 
-// Configs
-require( 'configs/config.php' );
+    /**
+     * Check if called from command-line-interfacew (CLI)
+     *
+     * @return bool
+     * @throws - no exceptions
+    */
+    function isCLI(): bool
+    {
+        return php_sapi_name() === 'cli';
+    }
 
-// Load logic
-require( 'loader.php' );
-
-// Handle request
-
+}
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =

@@ -2,7 +2,7 @@
 E-Commerce General Shop Demo-Project for Custom PHP Framework for API &amp; TypeScript + jQuery for Front
 
 # Stack
- * PHP 8+
+ * PHP 7.4+
    * Izy PHP Framework
    * Memcached
    * PDO
@@ -21,6 +21,17 @@ E-Commerce General Shop Demo-Project for Custom PHP Framework for API &amp; Type
  * CRM
  * mobile-ready
  * internationalization
+
+# Minimum Requirements
+ * PHP
+   * PHP 7.4+
+   * Memcached
+   * [] syntax support
+   * <?= syntax support
+ * JavaScript
+   * ES 2015 Support
+ * DB
+   * MySQL
 
 # Build
  * Run Migrations Script
