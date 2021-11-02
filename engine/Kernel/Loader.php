@@ -20,33 +20,24 @@
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// APPLICATION
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-define( 'APP_NAME', 'EShop' );
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// DEBUG & METRICS
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-define( 'ENVIRONMENT', EnvT::DEV );
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// REFLECTION & SYNTAX
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// ENCRYPTION
+//
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// ROUTING
+// CONFIGURE PHP
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// Web
-
-// API
+// DEBUG || TESTING
+if ( isEnv(EnvT::DEV) || isEnv(EnvT::TEST) ) {
+    ini_set( EPHPOptions::ASSERT_ACTIVE, '1' );
+    ini_set( EPHPOptions::ASSERT_BAIL, '1' );
+    ini_set( EPHPOptions::ASSERT_WARNING, '0' );
+    ini_set( EPHPOptions::ASSERT_EXCEPTION, '1' );
+} else {
+    ini_set( EPHPOptions::ASSERT_ACTIVE, '0' );
+    ini_set( EPHPOptions::ASSERT_BAIL, '0' );
+    ini_set( EPHPOptions::ASSERT_WARNING, '1' );
+    ini_set( EPHPOptions::ASSERT_EXCEPTION, '0' );
+}
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =

@@ -20,33 +20,42 @@
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// APPLICATION
+// INCLUDES
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-define( 'APP_NAME', 'EShop' );
+require( 'EnvironmentTypes.php' );
+require( 'EPHPOptions.php' );
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// DEBUG & METRICS
+// METHODS
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-define( 'ENVIRONMENT', EnvT::DEV );
+if ( !function_exists('isCLI') ) {
+    /**
+     * Check if called from command-line-interfacew (CLI)
+     *
+     * @return bool
+     * @throws - no exceptions
+    */
+    function isCLI(): bool
+    {
+        return php_sapi_name() === 'cli';
+    }
+}
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// REFLECTION & SYNTAX
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// ENCRYPTION
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// ROUTING
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-// Web
-
-// API
+if ( !function_exists('isEnv') ) {
+    /**
+     * Check Environment type
+     * @see EnvironmentTypes
+     *
+     * @param  int $type
+     * @return bool
+     * @throws - no exceptions
+    */
+    function isEnv( int $type ): bool
+    {
+        return ENVIRONMENT == $type;
+    }
+}
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =

@@ -19,19 +19,31 @@
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-if ( !function_exists('isCLI') ) {
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// TYPES
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    /**
-     * Check if called from command-line-interfacew (CLI)
-     *
-     * @return bool
-     * @throws - no exceptions
-    */
-    function isCLI(): bool
-    {
-        return php_sapi_name() === 'cli';
-    }
+/**
+ * Environemnt Types enumerations
+ *
+ * @version 1.0
+*/
+final class EnvironmentTypes
+{
 
-}
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // CONSTANTS
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    public const DEV  = 1;
+    public const TEST = 2;
+    public const PROD = 3;
+
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+};
+class_alias( EnvironmentTypes::class, 'EnvT' );
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =

@@ -19,16 +19,18 @@
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
+// Root Dir
+define( 'APP_DIR', __DIR__ );
+
 // Kernel
-require('engine/kernel.php');
+require('engine/Kernel/Kernel.php');
 
 // Configs
 require( 'configs/config.php' );
 
 // Load logic
-require( 'loader.php' );
+require( 'engine/kernel/Loader.php' );
 
 // Handle request
-
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
